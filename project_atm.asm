@@ -12,9 +12,6 @@ TOTAL        DW 20
     DATA3        DB 0DH,0AH,'ENTER YOUR PASSWORD: ',0 
     DATA4        DB 0DH,0AH,'DENIED 0  ',0  
     DATA5        DB 0DH,0AH,'ALLOWED 1 ',0 
-    DATA3        DB 0DH,0AH,'ENTER YOUR ID: ',0
-    DATA4        DB 0DH,0AH,'DENIED 0 ',0
-    DATA5        DB 0DH,0AH,'ALLOWED 1 ',0
     DATA6        DB '******WELCOME BACK******',0
     
     
