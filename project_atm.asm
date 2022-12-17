@@ -13,6 +13,8 @@ TOTAL        DW 20
     DATA4        DB 0DH,0AH,'DENIED 0  ',0  
     DATA5        DB 0DH,0AH,'ALLOWED 1 ',0 
     DATA6        DB '******WELCOME BACK******',0
-    
+    IDINPUT      DW 1 DUP (?)
+    PASSINPUT    DB 1 DUP (?)
+DATA ENDS
     
     
