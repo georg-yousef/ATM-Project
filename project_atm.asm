@@ -18,3 +18,7 @@ TOTAL        DW 20
 DATA ENDS
     
     
+CODE SEGMENT
+
+START:MOV  AX,DATA
+      MOV  DS,AX  
