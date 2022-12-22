@@ -21,6 +21,16 @@ TOTAL        DW 20
     ext          DB 10,13,"2. Exit$"
     IDINPUT      DW 1 DUP (?)
     PASSINPUT    DB 1 DUP (?)
+   
+ ;Money Withdrow Option
+    fivehun  db 10,13,"1. 500 USD$" 
+    one      db 10,13,"2. 1,000 USD$"
+    three    db 10,13,"3. 3,000 USD$"
+    five     db 10,13,"4. 5,000 USD$"
+    ten      db 10,13,"5. 10,000 USD$"
+    fiften   db 10,13,"6. 15,000 USD$"
+    tweenty  db 10,13,"7. 20,000 USD$"
+    
 DATA ENDS
     
     
