@@ -12,7 +12,13 @@ TOTAL        DW 20
     DATA3        DB 0DH,0AH,'ENTER YOUR PASSWORD: ',0 
     DATA4        DB 0DH,0AH,'DENIED 0  ',0  
     DATA5        DB 0DH,0AH,'ALLOWED 1 ',0 
-    DATA6        DB '******WELCOME BACK******',0
+    wel          DB 10,13," Welcome to Your Account $"
+    bal          DB 10,13,10,13,"1. Balance Inquiry $" 
+    with         DB 10,13,"2. Money Withdraw $" 
+    trans        DB 10,13,"3. Transfer Money $" 
+    ex           DB 10,13,"4. Exit $"
+    bac          DB 10,13,"1. Back$" 
+    ext          DB 10,13,"2. Exit$"
     IDINPUT      DW 1 DUP (?)
     PASSINPUT    DB 1 DUP (?)
 DATA ENDS
