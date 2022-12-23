@@ -64,3 +64,16 @@ L1:   INC  CX
       CMP  IDS2[SI],AX
       JE   PASS2
       JMP  L1
+PASS1:LEA  SI,DATA3
+      CALL PRINT_STRING
+      CALL SCAN_NUM      ; read the input and store it in cl
+      MOV  PASSINPUT,CL
+      MOV  AX,DX
+      MOV  DX,0002H
+      DIV  DL       ;al=ax/dl
+      MOV  SI,AX 
+      MOV  AL,CL     ; store the input in al
+      MOV  AH,00H
+      CMP  PASSWORDS1[SI],AL
+      JNE  ERROR
+      JMP  mainpross
