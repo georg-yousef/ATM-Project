@@ -12,13 +12,13 @@ TOTAL        DW 20
     DATA3        DB 0DH,0AH,'ENTER YOUR PASSWORD: ',0 
     DATA4        DB 0DH,0AH,'DENIED 0  ',0  
     DATA5        DB 0DH,0AH,'ALLOWED 1 ',0 
-    wel          DB 10,13," Welcome to Your Account $"
-    bal          DB 10,13,10,13,"1. Balance Inquiry $" 
-    with         DB 10,13,"2. Money Withdraw $" 
-    trans        DB 10,13,"3. Transfer Money $" 
-    ex           DB 10,13,"4. Exit $"
-    bac          DB 10,13,"1. Back$" 
-    ext          DB 10,13,"2. Exit$"
+    wel          DB 10,13," Please select the transaction $"
+    bal          DB 10,13,10,13,"1- Balance Inquiry $" 
+    with         DB 10,13,"2- Money Withdraw $" 
+    trans        DB 10,13,"3- Transfer Money $" 
+    ex           DB 10,13,"4- Exit $"
+    bac          DB 10,13,"1- Back$" 
+    ext          DB 10,13,"2- Exit$"
     IDINPUT      DW 1 DUP (?)
     PASSINPUT    DB 1 DUP (?)
    
@@ -38,3 +38,29 @@ CODE SEGMENT
 
 START:MOV  AX,DATA
       MOV  DS,AX  
+DEFINE_SCAN_NUM           
+DEFINE_PRINT_STRING 
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS 
+
+
+AGAIN:LEA  SI,DATA1              ; the string in data1 is stored in SI and then printed on the screen using PRINT_STRING procedure
+      CALL PRINT_STRING           
+      LEA  SI,DATA2              
+      CALL PRINT_STRING
+      MOV  SI,-1
+
+      CALL SCAN_NUM
+      MOV  IDINPUT,CX
+      MOV  AX,CX            ; SCAN_NUM gets the number from the user and stores it in CX register
+      MOV  CX,0 
+L1:   INC  CX
+      CMP  CX,TOTAL
+      JE   ERROR
+      INC  SI
+      MOV  DX,SI
+      CMP  IDS1[SI],AX
+      JE   PASS1            ; check which array matches the input and jump to it
+      CMP  IDS2[SI],AX
+      JE   PASS2
+      JMP  L1
