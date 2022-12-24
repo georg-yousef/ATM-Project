@@ -30,7 +30,28 @@ TOTAL        DW 20
     ten      db 10,13,"5. 10,000 USD$"
     fiften   db 10,13,"6. 15,000 USD$"
     tweenty  db 10,13,"7. 20,000 USD$"
+
+    t1       db 10,13,"Your Total Balance is: 24,500 USD $" 
+    av1      db 10,13,"Your Available Balance is: 24,400 USD $"
     
+    t2       db 10,13,"Your Total Balance is: 24,000 USD $" 
+    av2      db 10,13,"Your Available Balance is: 23,900 USD $"
+    
+    t3       db 10,13,"Your Total Balance is: 22,000 USD $" 
+    av3      db 10,13,"Your Available Balance is: 21,900 USD $"
+    
+    t4       db 10,13,"Your Total Balance is: 20,000 USD $" 
+    av4      db 10,13,"Your Available Balance is: 19,900 USD $"
+
+    t5       db 10,13,"Your Total Balance is: 15,000 USD $" 
+    av5      db 10,13,"Your Available Balance is: 14,900 USD $"
+    
+    t6       db 10,13,"Your Total Balance is: 10,000 USD $" 
+    av6      db 10,13,"Your Available Balance is: 9,900 USD $"
+    
+    t7       db 10,13,"Your Total Balance is: 5,000 USD $" 
+    av7      db 10,13,"Your Available Balance is: 4,900 USD $" 
+
 DATA ENDS
     
     
